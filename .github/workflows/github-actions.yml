@@ -1,0 +1,9 @@
+name: github-actions
+on: [push]
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Hello, world!"
+            - run: ls -la
+            - run: echo "This is a test of GitHub Actions."
