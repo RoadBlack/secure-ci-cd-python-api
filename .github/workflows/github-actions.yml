@@ -1,17 +1,15 @@
 name: github-actions
-defaults:
-    run:
-        shell: bash
-        working-directory: ./app
 on: [push, pull_request]
 jobs:
     install-dependencies:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v6
             - run: apt-get update && apt-get install -y python3 python3-pip
             - run: pip install -r requirements.txt
             
     run-tests:
+        
         runs-on: ubuntu-latest
         steps:
-            - run: pytest endpont-tests.py
+            - run: pytest endpoint-tests.py
