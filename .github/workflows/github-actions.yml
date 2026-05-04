@@ -12,5 +12,6 @@ jobs:
     run-tests:
         runs-on: ubuntu-latest
         steps:
+            - run: python3 -m venv venv
             - run: source ./venv/bin/activate
             - run: pytest endpoint-tests.py
