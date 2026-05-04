@@ -12,5 +12,6 @@ jobs:
             - run: ls -la && sleep 5
             - run: source ./venv/bin/activate
             - run: cd app
+            - run: ls -la && sleep 5
             - run: pytest endpoint-tests.py
             
