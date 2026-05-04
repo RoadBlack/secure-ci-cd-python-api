@@ -10,7 +10,7 @@ jobs:
             - run: sudo pip install -r requirements.txt --ignore-installed urllib3
             
     run-tests:
-        
         runs-on: ubuntu-latest
         steps:
+            - run: source ./venv/bin/activate
             - run: pytest endpoint-tests.py
