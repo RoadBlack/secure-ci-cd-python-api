@@ -9,9 +9,7 @@ jobs:
             - run: sudo apt-get update && sudo apt-get install -y python3 python3-pip
             - run: sudo pip install -r requirements.txt --ignore-installed urllib3
             - run: python3 -m venv venv
-            - run: ls -la && sleep 5
             - run: source ./venv/bin/activate
-            - run: cd app
-            - run: ls -la && sleep 5
-            - run: pytest endpoint-tests.py
+            - run: pytest /app/endpoint-tests.py
+            - run: cat /app/unit-tests.py
             
