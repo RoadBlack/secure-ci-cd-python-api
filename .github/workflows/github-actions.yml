@@ -11,5 +11,6 @@ jobs:
             - run: python3 -m venv venv
             - run: ls -la && sleep 5
             - run: source ./venv/bin/activate
+            - run: cd /app
             - run: pytest endpoint-tests.py
             
