@@ -10,6 +10,6 @@ jobs:
             - run: sudo pip install -r requirements.txt --ignore-installed urllib3
             - run: python3 -m venv venv
             - run: source ./venv/bin/activate
-            - run: pytest /app/endpoint-tests.py
-            - run: cat /app/unit-tests.py
+            - run: pytest ./app/endpoint-tests.py
+            - run: cat ./app/unit-tests.py
             
