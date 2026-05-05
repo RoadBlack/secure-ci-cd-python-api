@@ -5,14 +5,16 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v6
-            - uses: gitleaks/gitleaks-action@v2
+            - uses: gitleaks/gitleaks-action@v3
+              with:
+                fetch-depth: 0
               env:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
     install-dependencies-and-run-tests:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v6
-            - run: ls -la
+           # - run: ls -la - troubleshooting step to check the contents of the repository 
             - run: sudo apt-get update && sudo apt-get install -y python3 python3-pip
             - run: sudo pip install -r requirements.txt --ignore-installed urllib3
             - run: python3 -m venv venv

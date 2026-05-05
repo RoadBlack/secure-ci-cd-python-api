@@ -15,4 +15,4 @@ async def get_health():
 @app.get("/version",  status_code=200)
 async def get_version():
     password = "supersecretpassword"
-    return {"version": app.version, "password": password}  
+    return {"version": app.version,}  
