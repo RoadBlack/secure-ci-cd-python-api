@@ -5,9 +5,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v6
-            - uses: gitleaks/gitleaks-action@v2.3.9
               with:
                 fetch-depth: 0
+            - uses: gitleaks/gitleaks-action@v2.3.9
               env:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
                 GITLEAKS_VERSION: latest
