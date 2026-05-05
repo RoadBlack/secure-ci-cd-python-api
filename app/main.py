@@ -12,6 +12,7 @@ def read_app():
 async def get_health():
     return {"status":"ok"}
 # Version endpoint
-@app.get("/version", status_code=200)
+@app.get("/version",  status_code=200)
 async def get_version():
-    return {"version": app.version}  
+    password = "supersecretpassword"
+    return {"version": app.version, "password": password}  
