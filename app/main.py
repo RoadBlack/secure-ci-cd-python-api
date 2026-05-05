@@ -16,3 +16,7 @@ async def get_health():
 async def get_version():
     password = "supersecretpassword"
     return {"version": app.version,}  
+@app.get("/secret",  status_code=200)
+async def get_secret():
+    AWS_SECRET_ACCESS_KEY = "AKIAV4L3OR2EXAMPLE"
+    return {"AWS_SECRET_ACCESS_KEY": AWS_SECRET_ACCESS_KEY}
