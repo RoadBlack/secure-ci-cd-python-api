@@ -1,0 +1,4 @@
+vulnerabilities:
+  - id: CVE-2026-31431
+    statement:  "Kernel CVE, image cannot patch host kernel."
+    severity: HIGH

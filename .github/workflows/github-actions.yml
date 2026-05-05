@@ -30,7 +30,7 @@ jobs:
             - run: ls -la
             - name: Build Docker Image
               run: docker build -t myapp:latest .
-            - name: Run trivy vurnability scan
+            - name: Run trivy vulnerability scan
               uses: aquasecurity/trivy-action@v0.36.0
               with:
                 image-ref: myapp:latest
@@ -38,7 +38,9 @@ jobs:
                 exit-code: 1
                 vuln-type: 'os,library'
                 severity: 'HIGH,CRITICAL' 
-            - name: Upload Vurnerability Report
+              env:
+                TRIVY_IGNORE: .trivyignore.yaml
+            - name: Upload Vulnerability Report
               uses: actions/upload-artifact@v4
               with:
                 name: trivy-report
