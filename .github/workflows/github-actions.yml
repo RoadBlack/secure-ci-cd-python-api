@@ -10,6 +10,7 @@ jobs:
                 fetch-depth: 0
               env:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
+                GITLEAKS_VERSION: latest
     install-dependencies-and-run-tests:
         runs-on: ubuntu-latest
         steps:

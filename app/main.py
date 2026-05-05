@@ -14,7 +14,7 @@ async def get_health():
 # Version endpoint
 @app.get("/version",  status_code=200)
 async def get_version():
-    password = "supersecretpassword"
+    DB_PASSWORD = "supersecretpassword"
     return {"version": app.version,}  
 @app.get("/secret",  status_code=200)
 async def get_secret():
