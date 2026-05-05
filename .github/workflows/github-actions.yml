@@ -32,14 +32,14 @@ jobs:
               run: docker build -t myapp:latest .
             - name: Run trivy vulnerability scan
               uses: aquasecurity/trivy-action@v0.36.0
+              env:
+                TRIVY_IGNORE: .trivyignore.yaml
               with:
                 image-ref: myapp:latest
                 format: table
                 exit-code: 1
                 vuln-type: 'os,library'
                 severity: 'HIGH,CRITICAL' 
-              env:
-                TRIVY_IGNORE: .trivyignore.yaml
             - name: Upload Vulnerability Report
               uses: actions/upload-artifact@v4
               with:
