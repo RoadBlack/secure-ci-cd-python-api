@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 # Set working directory.
 COPY /app /app
 COPY ./requirements.txt /app
