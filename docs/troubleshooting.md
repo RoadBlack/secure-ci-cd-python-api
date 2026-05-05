@@ -5,5 +5,3 @@ Set the WORKDIR.
 Copy requirements.txt first to leverage Docker’s layer caching.
 Install dependencies.
 Copy the remaining source code.
-
-DB_PASSWORD=8ae31cacf141669ddfb5da
