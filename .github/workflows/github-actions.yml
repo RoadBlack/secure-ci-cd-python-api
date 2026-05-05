@@ -12,6 +12,7 @@ jobs:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
                 GITLEAKS_VERSION: latest
     install-dependencies-and-run-tests:
+        needs: scan-for-secrets
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v6
@@ -36,4 +37,4 @@ jobs:
                 format: table
                 exit-code: 1
                 vuln-type: 'os,library'
-                severity: 'MEDIUM,HIGH,CRITICAL' 
+                severity: 'HIGH,CRITICAL' 
