@@ -39,7 +39,7 @@ This repository is intended as a learning and practice project for:
 
 | Area | Description |
 |---|---|
-| CI/CD -> Automated pipeline that validates code before build or deployment |
+| CI/CD | Automated pipeline that validates code before build or deployment |
 | Docker | API packaged into a reproducible container image |
 | Automated Testing | Tests verify basic API behavior before the pipeline continues |
 | Secret Scanning | Checks for accidentally committed credentials or sensitive values |
