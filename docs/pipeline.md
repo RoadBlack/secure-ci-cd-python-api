@@ -26,6 +26,16 @@ Test:
 I intentionally added a fake secret pattern to verify that the pipeline detects it.
 Result:
 The pipeline failed as expected.
-
 Remediation:
 The fake secret was removed and the pipeline passed.
+
+Control: Static application security testing
+
+Tool:
+Semgrep / CodeQL
+
+Risk addressed:
+Insecure coding patterns detected before push to production.
+
+Where it runs:
+Push request pipeline.
